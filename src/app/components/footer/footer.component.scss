@@ -1,0 +1,52 @@
+@import '@import "~src/styles';
+
+$facebook:#3B5998;
+$linkedin: #3395C4;
+$text-color: white;
+$box: 60;
+$font: 30;
+$height: 100;
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $height +0px;
+    background: $footer;
+    color: $text-color;
+}
+
+.row {
+    width: 50%;
+    margin: 0 auto;
+    .fa {
+        padding: 15px;
+        font-size: $font + 0px;
+        width: $box + 0px;
+        height: $box + 0px;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 25px;
+        border-radius: 15%;
+        margin-top: 20px;
+    }
+    
+    /* Facebook */
+    .fa-facebook {
+        background: $facebook;
+        color: $text-color;
+    }
+
+    /* LinkedIn */
+    .fa-linkedin {
+        background: $linkedin;
+        color: $text-color;
+    }
+
+    .copyright {
+        margin-left: 25px;
+        line-height: $font + 0px;
+        margin-top: ($height - $font) / 2 + 0px;
+    }
+}
