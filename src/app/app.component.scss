@@ -1,0 +1,19 @@
+@import '@import "~src/styles';
+
+.body {
+    height: 100%;
+    background-image: url("./../assets/images/board-room.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    h1 {
+        text-align: center;
+        padding-top: 10%;
+        color: white;
+        font-family: "proxima-nova";
+        font-size: 72px;
+        font-weight: 700;
+        margin: auto;
+    }
+}

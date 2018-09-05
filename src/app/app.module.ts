@@ -1,6 +1,7 @@
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FooterModule } from './components/footer/footer.module';
+import { HeaderModule } from './components/header/header.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FooterModule,
+    HeaderModule,
     RouterModule.forRoot(routes)
   ],
   providers: []

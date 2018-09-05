@@ -1,0 +1,15 @@
+@import '@import "~src/styles';
+
+$text-color: white;
+$font: 30;
+$height: 100;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $height +0px;
+    background: $header;
+    color: $text-color;
+}
