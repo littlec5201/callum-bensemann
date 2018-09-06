@@ -1,15 +1,61 @@
 @import '@import "~src/styles';
-
 $text-color: white;
-$font: 30;
 $height: 100;
-
+$font: $height * 0.3;
+$padding: $height * 0.2;
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: $height +0px;
+    height: $height + 0px;
     background: $header;
     color: $text-color;
+    .links {
+        height: 100%;
+        display: inline-block;
+        .container {
+            height: 100%;
+            padding-top: ($height - (2 * $padding) - $font) / 2  + 0px;
+        }
+        a {
+            font-family: 'proxima-nova';
+            font-weight: 1000;
+            font-style: normal;
+            font-size: $padding + 0px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: $text-color;
+            padding: $padding + 0px;
+        }
+        .container:hover {
+            a {
+                color: grey;
+            }
+        }
+        a:hover {
+            text-decoration: none;
+            color: $text-color !important;
+        }
+        .link {
+            display: inline-block;
+            height: $font;
+        }
+        .icon {
+            display: inline-block;
+            height: 100%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .icon {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .link {
+        display: none !important;
+    }
 }
