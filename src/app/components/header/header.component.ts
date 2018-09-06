@@ -12,4 +12,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  yo() {
+    let el: HTMLElement;
+    el = document.getElementById('myLinks');
+    if (el.className === 'links') {
+      el.className += ' responsive';
+    } else {
+      el.className = 'links';
+    }
+  }
 }

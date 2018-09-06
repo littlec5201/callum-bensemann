@@ -18,6 +18,16 @@ $padding: $height * 0.2;
             height: 100%;
             padding-top: ($height - (2 * $padding) - $font) / 2  + 0px;
         }
+        .container.bars {
+            position: absolute;
+            height: 100%;
+            padding-top: ($height - (2 * $padding) - $font) / 2  + 0px;
+            float: right;
+            right: 0;
+            a {
+                float: right;
+            }
+        }
         a {
             font-family: 'proxima-nova';
             font-weight: 1000;
@@ -39,11 +49,9 @@ $padding: $height * 0.2;
         }
         .link {
             display: inline-block;
-            height: $font;
         }
         .icon {
             display: inline-block;
-            height: 100%;
         }
     }
 }
@@ -55,7 +63,21 @@ $padding: $height * 0.2;
 }
 
 @media only screen and (max-width: 1000px) {
-    .link {
-        display: none !important;
+    .links {
+        display: block;
+        .container {
+            padding-top: 0 !important;
+        }
+        .link {
+            display: none !important;
+        }
+    }
+    .links.responsive {
+        .container {
+            padding-top: ($height - (2 * $padding) - $font) / 2 + 3  + 0px !important;
+        }
+        .link {
+            display: block !important;
+        }
     }
 }

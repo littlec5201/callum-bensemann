@@ -1,15 +1,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="header">
-    <div class="links">
-        <div class="container">
-            <a class="link" href="/#/">Home</a>
-            <a class="link" href="/">About</a>
-            <a class="link" href="/">Contact</a>
-            <a class="link" href="/">Resume</a>
-            <a class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
+    <div class="links" id="myLinks">
+        <div class="row">
+            <div class="container">
+                <a class="link" href="/#/">Home</a>
+                <a class="link" href="/">About</a>
+                <a class="link" href="/">Contact</a>
+                <a class="link" href="/">Resume</a>
+            </div>
+            <div class="container bars">
+                <a href="javascript:void(0);" class="icon" (click)="yo()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
