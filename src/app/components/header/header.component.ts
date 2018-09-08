@@ -6,19 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
   }
 
-  yo() {
-    let el: HTMLElement;
-    el = document.getElementById('myLinks');
-    if (el.className === 'links') {
-      el.className += ' responsive';
+  expandCollapse() {
+    let header: HTMLElement;
+    header = document.getElementById('header');
+    if (header.className === 'header') {
+      header.className += ' responsive';
     } else {
-      el.className = 'links';
+      header.className = 'header';
+    }
+  }
+
+  onResize() {
+    if (window.innerWidth > 1000) {
+      let header: HTMLElement;
+      header = document.getElementById('header');
+      header.className = 'header';
     }
   }
 }

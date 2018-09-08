@@ -1,8 +1,9 @@
 @import '@import "~src/styles';
 $text-color: white;
-$height: 100;
-$font: $height * 0.3;
-$padding: $height * 0.2;
+$height: 80;
+$font: 30;
+$padding: 20;
+$padding-top: ($height - (2 * $padding) - $font) / 2;
 .header {
     position: fixed;
     top: 0;
@@ -12,16 +13,23 @@ $padding: $height * 0.2;
     background: $header;
     color: $text-color;
     .links {
-        height: 100%;
         display: inline-block;
         .container {
-            height: 100%;
-            padding-top: ($height - (2 * $padding) - $font) / 2  + 0px;
+            padding-top: $padding-top + 0px;
+            a:hover {
+                text-decoration: none;
+                color: $text-color !important;
+            }
+            .icon {
+                display: inline-block;
+            }
+            .link {
+                display: inline-block;
+            }
         }
-        .container.bars {
+        .bars {
             position: absolute;
-            height: 100%;
-            padding-top: ($height - (2 * $padding) - $font) / 2  + 0px;
+            padding-top: $padding-top + 0px;
             float: right;
             right: 0;
             a {
@@ -29,8 +37,7 @@ $padding: $height * 0.2;
             }
         }
         a {
-            font-family: 'proxima-nova';
-            font-weight: 1000;
+            font-weight: 600;
             font-style: normal;
             font-size: $padding + 0px;
             letter-spacing: .15em;
@@ -43,20 +50,10 @@ $padding: $height * 0.2;
                 color: grey;
             }
         }
-        a:hover {
-            text-decoration: none;
-            color: $text-color !important;
-        }
-        .link {
-            display: inline-block;
-        }
-        .icon {
-            display: inline-block;
-        }
     }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
     .icon {
         display: none !important;
     }
@@ -65,19 +62,27 @@ $padding: $height * 0.2;
 @media only screen and (max-width: 1000px) {
     .links {
         display: block;
-        .container {
-            padding-top: 0 !important;
-        }
         .link {
             display: none !important;
         }
     }
-    .links.responsive {
-        .container {
-            padding-top: ($height - (2 * $padding) - $font) / 2 + 3  + 0px !important;
+    .header {
+        .bars {
+            margin-top: -10px !important;
         }
-        .link {
-            display: block !important;
+    }
+    .header.responsive {
+        height: 298px !important;
+        .links {
+            .bars {
+                margin-top: 4px !important;
+            }
+            .container {
+                padding-top: 5px !important;
+                .link {
+                    display: block !important;
+                }
+            }
         }
     }
 }
